@@ -1,6 +1,6 @@
 #CCNT Consortium BSOs
 - type: entity
-  parent: [ BaseNanoTrasenContraband, ClothingOuterHardsuitERTLeader ] #NTNC from syndie lead -> ERT lead <3
+  parent: [ BaseNanoTrasenContraband, ClothingOuterHardsuitERTLeader ]
   id: ClothingOuterHardsuitNTNCConsortium
   name: NanoTrasen navy marine hardsuit
   description: A protective hardsuit worn by NanoTrasen Navy Marines.
@@ -11,14 +11,15 @@
       sprite: _Starlight/Admeme/Clothing/OuterClothing/Hardsuits/ntnc_hardsuit.rsi
     - type: ToggleableClothing
       clothingPrototype: ClothingHeadHelmetHardsuitNTNCConsortium
-    - type: Armor # teh.saint update start
+    - type: Armor
       modifiers:
         coefficients:
-          Blunt: 0.40
-          Slash: 0.40
-          Piercing: 0.40
+          Blunt: 0.6
+          Slash: 0.6
+          Piercing: 0.4
           Radiation: 0.65
           Caustic: 0.6
+          Heat: 0.5
       staminaModifier: 0.3
     - type: FootstepModifier
       footstepSoundcollection:
@@ -33,12 +34,12 @@
     - type: PressureProtection
       highPressureMultiplier: 0.02
       lowPressureMultiplier: 1000
-      # teh.saint update end
+    - type: ExplosionResistance
+      explosionMultiplier: 0.45
         
 
 - type: entity
-  parent: [ BaseNanoTrasenContraband, ClothingOuterHardsuitSyndieMedic ] #teh.saint change NTNC medic -> SyndieMedic
-  id: ClothingOuterHardsuitNTNCConsortiumMedic
+  parent: [ BaseNanoTrasenContraband, ClothingOuterHardsuitSyndieMedic ]
   name: NanoTrasen navy marine medic hardsuit
   description: A protective hardsuit worn by NanoTrasen Navy Marine medical personnel.
   components:
@@ -76,5 +77,3 @@
       lightMask: ConeDouble
     - type: RotatingLight
       speed: 360
-      # stolen from the ERT Medic hardsuit, for the lols. 
-      # teh.saint update end
